@@ -1,5 +1,5 @@
 export default function NewOrderPage() {
     return(
-        <h1>New Order Page</h1>
+        <h1>P2</h1>
     )
 }

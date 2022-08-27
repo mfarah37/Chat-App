@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+body {
+  background-color: #F3EBF6;
+  font-family: 'Ubuntu', sans-serif;
+}
