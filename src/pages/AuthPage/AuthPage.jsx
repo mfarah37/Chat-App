@@ -7,7 +7,6 @@ export default function AuthPage({ setUser }) {
         <main>
             <h1>Sign In</h1>
             <LoginForm setUser={setUser} />
-            <Link to="/signup" className="">Sign Up</Link>
         </main>
     )
 }

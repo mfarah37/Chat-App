@@ -1,0 +1,35 @@
+.Auth-form-container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+}
+
+.Auth-form-content2 {
+    height: 35vh;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.Auth-form-title {
+    border: solid bisque 3px;
+    color: rgb(34, 34, 34);
+    font-weight: 800;
+}
+
+.form-bg, .form-group {
+  background-color: white;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(34, 34, 34);
+}
+
+.su-link {
+  font-size: 20px;
+}

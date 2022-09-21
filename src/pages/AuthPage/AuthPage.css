@@ -1,0 +1,15 @@
+/* background: #5265c4; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #root {
+    background-color: gray;
+    height: 100vh;
+    width: 100%;
+  }
+  .App {
+    height: 100vh;
+    width: 100%;
+  }
