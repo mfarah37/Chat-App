@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import * as usersService from '../../utilities/users-service';
+import './LoginForm.css'
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -28,16 +30,40 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
-      <div className="form-container" onSubmit={handleSubmit}>
-        <form autoComplete="off" >
-          <label>Email</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button type="submit">LOG IN</button>
-        </form>
-      </div>
+    <div className="Auth-form-container">
+      <form autoComplete="off" onSubmit={handleSubmit} className="form-bg">
+        <div className="Auth-form-content">
+          <div className="Auth-form-title">Sign In</div>
+          <div className="form-group mt-3">
+            <label>Email</label>
+            <input
+              type="text"
+              name="email"
+              value={credentials.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className="form-control mt-1"
+              required
+            />
+          </div>
+          <div className="form-group mt-3">
+            <label>Password</label>
+            <input
+              type="password"
+              name="password"
+              value={credentials.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+              className="form-control mt-1"
+              required
+            />
+          </div>
+          <div className="d-grid gap-2 mt-3">
+            <button type="submit" className="btn btn-primary">LOG IN</button>
+          </div>
+          <Link to="/signup" className="su-link">Sign Up</Link>
+        </div>
+      </form>
       <p className="error-message">&nbsp;{error}</p>
     </div>
   );
