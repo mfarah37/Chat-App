@@ -1,0 +1,24 @@
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5265c4;
+  }
+  .link {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 5px;
+    position: relative;
+    opacity: 0.7;
+  }
+  .link:hover {
+    opacity: 1;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 21px;
+    margin: 15px;
+    color: #ffffff;
+  }
