@@ -14,7 +14,7 @@ export default function NavBar({ user, setUser }) {
             <div className="nav-items">
                 <span className="logo">Gym App</span>
                 <Link to="/home" className="link">Home</Link>
-                <Link to="/orders" className="link">P2</Link>
+                <Link to="/orders" className="link">QR</Link>
                 <Link to="" onClick={handleLogOut} className="link">Log Out</Link>
                 <span>Hello, {user.name}</span>
             </div>

@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthPageTwo from '../AuthPage/AuthPageTwo';
 import HomePage from '../HomePage/HomePage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import QrScanPage from '../QrScanPage/QrScanPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -19,7 +19,7 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               <Route path="/home" element={<HomePage />} />
-              <Route path="/orders" element={<OrderHistoryPage />} />
+              <Route path="/orders" element={<QrScanPage />} />
             </Routes>
           </>
           :
