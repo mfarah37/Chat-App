@@ -34,34 +34,38 @@ export default function LoginForm({ setUser }) {
     <>
       <Form autoComplete="off" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formbasicEmail">
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          value={credentials.email}
-          onChange={handleChange}
-          placeholder="Enter your email"
-          className="form-control mt-1"
-          required
-        />
+          <Form.Label>Email address</Form.Label>
+          <input
+            type="text"
+            name="email"
+            value={credentials.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            className="form-control mt-1"
+            required
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formbasicPassword">
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          value={credentials.password}
-          onChange={handleChange}
-          placeholder="Enter your password"
-          className="form-control mt-1"
-          required
-        />
+          <Form.Label>Password</Form.Label>
+          <input
+            type="password"
+            name="password"
+            value={credentials.password}
+            onChange={handleChange}
+            placeholder="Enter your password"
+            className="form-control mt-1"
+            required
+          />
         </Form.Group>
-        <Button type="submit" className="btn btn-primary">
-          LOG IN
-        </Button>
-
-        <Button variant="link" href="/signup" className="su-link">
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Remember Me" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicButton">
+          <Button type="submit" className="btn btn-primary">
+            LOG IN
+          </Button>
+        </Form.Group>
+        <Button variant="link" href="/signup">
           Sign Up
         </Button>
       </Form>
