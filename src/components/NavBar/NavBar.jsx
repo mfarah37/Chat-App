@@ -10,17 +10,20 @@ export default function NavBar({ user, setUser }) {
     setUser(null);
   }
   return (
-    <Navbar collapseOnSelect fixed="top" expand="sm" bg="dark" variant="dark">
+    <Navbar collapseOnSelect fixed="top" expand="sm" bg="light" variant="light">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Brand>Gym App</Navbar.Brand>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/home" className="link">
+          <Nav>
+            <Nav.Link href="/home">
               Home
             </Nav.Link>
-            <Nav.Link href="/orders" className="link">
+            <Nav.Link href="/qr_scan">
               QR
+            </Nav.Link>
+            <Nav.Link href="/third">
+              Third Page
             </Nav.Link>
             <Nav.Link href="/" onClick={handleLogOut} className="link">
               Log Out
