@@ -10,7 +10,7 @@ export default function QrScanPage() {
     return(
         <div className="qr-container">
             <div className="qr-contents">
-                <h1 className="qr-title">Qr Scanner</h1>
+                <h1>QR SCAN</h1>
                 <div className="qr-scanner">
                     <QrReader />
                 </div>
