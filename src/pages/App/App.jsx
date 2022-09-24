@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthPage from '../AuthPage/AuthPage';
 import AuthPageTwo from '../AuthPage/AuthPageTwo';
 import HomePage from '../HomePage/HomePage';
