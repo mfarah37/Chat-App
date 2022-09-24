@@ -2,8 +2,9 @@ import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
 import { Link } from "react-router-dom";
 import "./SignUpForm.css";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
 
 export default class SignUpForm extends Component {
   state = {
@@ -53,63 +54,70 @@ export default class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <>
-        <Form
-          autoComplete="off"
-          onSubmit={this.handleSubmit}
-        >
-        <Form.Group className="mb-3" controlId="formBasicText">
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={this.state.name}
-            onChange={this.handleChange}
-            className="form-control mt-1"
-            required
-          />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            className="form-control mt-1"
-            required
-          />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            className="form-control mt-1"
-            required
-          />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-          <label>Confirm</label>
-          <input
-            type="password"
-            name="confirm"
-            value={this.state.confirm}
-            onChange={this.handleChange}
-            className="form-control mt-1"
-            required
-          />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicButton">
-          <Button type="submit" disabled={disable}>
-            SIGN UP
-          </Button>
-          </Form.Group>
-          <Link to="/" className="">
-            Sign In
-          </Link>
-        </Form>
+        <Container className="border solid">
+          <Form
+            className="signup-form"
+            autoComplete="off"
+            onSubmit={this.handleSubmit}
+          >
+            <Form.Group className="mb-3" controlId="formBasicText">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={this.state.name}
+                onChange={this.handleChange}
+                placeholder="Name"
+                className="form-control mt-1"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                placeholder="Email"
+                className="form-control mt-1"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                placeholder="Passowrd"
+                className="form-control mt-1"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Confirm</Form.Label>
+              <Form.Control
+                type="password"
+                name="confirm"
+                value={this.state.confirm}
+                onChange={this.handleChange}
+                placeholder="Confirm Password"
+                className="form-control mt-1"
+                required
+              />
+            </Form.Group>
+            <Form.Group className="btn-sub" controlId="formBasicButton">
+              <Button type="submit" disabled={disable}>
+                SIGN UP
+              </Button>
+            </Form.Group>
+            <Link to="/" className="">
+              Sign In
+            </Link>
+          </Form>
+        </Container>
         <p className="error-message">&nbsp;{this.state.error}</p>
       </>
     );
