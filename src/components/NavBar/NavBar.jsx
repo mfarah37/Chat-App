@@ -22,8 +22,8 @@ export default function NavBar({ user, setUser }) {
             <Nav.Link href="/qr_scan">
               QR
             </Nav.Link>
-            <Nav.Link href="/third">
-              Third Page
+            <Nav.Link href="/settings">
+              Settings
             </Nav.Link>
             <Nav.Link href="/" onClick={handleLogOut} className="link">
               Log Out

@@ -16,7 +16,7 @@ export default function QrScanPage() {
                     <QrReader />
                 </div>
                 <div className="qr-end">
-                    <Button className="qr-btn" variant="danger" onClick={handleCheckToken}>SCAN</Button>
+                    <Button className="qr-btn" variant="primary" onClick={handleCheckToken}></Button>
                 </div>
             </div>
         </div>

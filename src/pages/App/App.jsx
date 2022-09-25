@@ -7,7 +7,7 @@ import AuthPageTwo from '../AuthPage/AuthPageTwo';
 import HomePage from '../HomePage/HomePage';
 import NavBar from '../../components/NavBar/NavBar';
 import QrScanPage from '../QrScanPage/QrScanPage';
-import ThirdPage from '../ThirdPage/ThirdPage';
+import SettingsPage from '../SettingsPage/SettingsPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser())
@@ -27,7 +27,7 @@ export default function App() {
             <Routes>
               <Route path="/home" element={<HomePage />} />
               <Route path="/qr_scan" element={<QrScanPage />} />
-              <Route path="/third" element={<ThirdPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
             </Routes>
           </>
           :
