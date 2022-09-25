@@ -1,8 +1,8 @@
-import './ThirdPage.css'
+
 
 export default function ThirdPage() {
     return(
-        <div className="header">
+        <div>
             <h1>Third Page</h1>
         </div>
     )
