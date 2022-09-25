@@ -1,8 +1,8 @@
-import './HomePage.css'
+
 
 export default function HomePage() {
     return(
-        <div className="header">
+        <div>
             <h1>Home Page</h1>
         </div>
     )

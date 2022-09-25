@@ -1,6 +1,7 @@
 import { checkToken } from "../../utilities/users-service";
-import QrReader from '../../components/QrReader/QrReader'
-import './QrScanPage.css'
+import QrReader from '../../components/QrReader/QrReader';
+import './QrScanPage.css';
+import Button from 'react-bootstrap/Button';
 
 export default function QrScanPage() {
     const handleCheckToken = async () => {
@@ -15,7 +16,7 @@ export default function QrScanPage() {
                     <QrReader />
                 </div>
                 <div className="qr-end">
-                    <button className="qr-btn" onClick={handleCheckToken}></button>
+                    <Button className="qr-btn" variant="danger" onClick={handleCheckToken}>SCAN</Button>
                 </div>
             </div>
         </div>

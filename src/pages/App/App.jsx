@@ -12,7 +12,14 @@ import ThirdPage from '../ThirdPage/ThirdPage';
 export default function App() {
   const [user, setUser] = useState(getUser())
   return (
-    <div className="App">
+    <div 
+      className="App"
+      style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+    }}>
       {
         user ?
           <>
@@ -24,10 +31,12 @@ export default function App() {
             </Routes>
           </>
           :
+          <>
           <Routes>
             <Route path="/" element={<AuthPage setUser={setUser} />} />
             <Route path="/signup" element={<AuthPageTwo setUser={setUser} />} />
           </Routes>
+          </>
       }
     </div>
   );
