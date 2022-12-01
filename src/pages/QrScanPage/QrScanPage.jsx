@@ -9,16 +9,8 @@ export default function QrScanPage() {
         console.log(expDate)
     }
     return(
-        <div className="qr-container">
-            <div className="qr-contents">
-                <h1>QR SCAN</h1>
-                <div className="qr-scanner">
-                    <QrReader />
-                </div>
-                <div className="qr-end">
-                    <Button className="qr-btn" variant="primary" onClick={handleCheckToken}></Button>
-                </div>
-            </div>
-        </div>
+    
+            <QrReader />
+        
     )
 }

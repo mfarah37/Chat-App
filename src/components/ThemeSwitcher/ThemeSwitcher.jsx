@@ -32,6 +32,15 @@ export default function ThemeSwitcher() {
           <Dropdown.Item eventKey="3" onClick={() => setTheme("success")}>
             Success
           </Dropdown.Item>
+          <Dropdown.Item eventKey="3" onClick={() => setTheme("info")}>
+            Info
+          </Dropdown.Item>
+          <Dropdown.Item eventKey="3" onClick={() => setTheme("light")}>
+            Light
+          </Dropdown.Item>
+          <Dropdown.Item eventKey="3" onClick={() => setTheme("dark")}>
+            Dark
+          </Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item eventKey="4" onClick={resetTheme}>
             Default Theme
